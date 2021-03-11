@@ -1,14 +1,10 @@
-const alphabet = "abcdefghijklmnopqrstuvwxyz";
-
 const groupTitles = (titles) => {
   const groupedTitles = new Map();
   titles.forEach((title) => {
     const wordMap = new Array(26).fill(0);
     [...title].forEach((letter) => {
-      const letterIndex = alphabet.indexOf(letter);
-      if (letterIndex >= 0) {
-        wordMap[letterIndex]++;
-      }
+      const letterIndex = letter.charCodeAt() - "a".charCodeAt();
+      wordMap[letterIndex]++;
     });
 
     const titleKey = "#" + wordMap.join("#");
