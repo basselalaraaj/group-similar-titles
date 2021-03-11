@@ -17,5 +17,5 @@ titles = ["duel", "dule", "speed", "spede", "deul", "cars"]
 query = "spede"
 
 for groupedTitles in groupTitles(titles):
-    if(query in groupedTitles):
+    if query in groupedTitles:
         print(groupedTitles)
